@@ -1,6 +1,9 @@
 class Player
   def play_turn(warrior)
-    warrior.walk!
-    warrior.feel.empty?
+    if warrior.feel.empty?
+      warrior.walk!
+    else
+      warrior.attack!
+    end
   end
 end
